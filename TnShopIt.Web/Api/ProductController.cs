@@ -57,9 +57,8 @@ namespace TnShopIt.Web.Api
                 return response;
             });
         }
-
-        [Route("getall")]
         [HttpGet]
+        [Route("getall")]       
         public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>
